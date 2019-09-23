@@ -19,6 +19,7 @@ export class ClienteService {
         return this.http.get<ClienteDTO>(
             `${API_CONFIG.baseUrl}/clientes/email?value=${email}`,
             {'headers': authHeader});
+            return this.http.get<ClienteDTO>(`${API_CONFIG.baseUrl}/clientes/email?value=${email}`);
     }
 
     getImageFromBucket(id : string) : Observable<any> {
